@@ -14,6 +14,7 @@ public class AnnotationController {
 		try {
 			// Create entry point
 			IMarker entryPointMarker = MarkerAdapter.adapt(dto, IMarker.BOOKMARK);
+			entryPointMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_INFO);
 			entryPointMarker.setAttribute(IMarker.MESSAGE, String.format("Entry point: %s", dto.text));
 
 			// Create tasks around entry point
@@ -46,6 +47,7 @@ public class AnnotationController {
 		try {
 			// Create sink
 			IMarker sinkMarker = MarkerAdapter.adapt(dto, IMarker.BOOKMARK);
+			sinkMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_WARNING);
 			sinkMarker.setAttribute(IMarker.MESSAGE, String.format("Sink: %s", dto.text));
 
 			// Create tasks around sink
@@ -79,6 +81,44 @@ public class AnnotationController {
 			IMarker documentMarker = MarkerAdapter.adapt(dto, IMarker.TASK);
 			documentMarker.setAttribute(IMarker.MESSAGE, String.format("Document security issue with %s", dto.text));
 			documentMarker.setAttribute(IMarker.PRIORITY, IMarker.PRIORITY_HIGH);
+
+		} catch (Exception e) {
+			// TODO : log
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Creates a taint marker
+	 * 
+	 * @param dto  a marker dto containing the information needed to make a marker
+	 */
+	// TODO: test
+	public static void addTaint(MarkerDTO dto) {
+		try {
+			IMarker taintMarker = MarkerAdapter.adapt(dto, IMarker.PROBLEM);
+			taintMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_INFO);
+			taintMarker.setAttribute(IMarker.MESSAGE, String.format("Tainted: %s", dto.text));
+
+		} catch (Exception e) {
+			// TODO : log
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Creates a sanitizer marker
+	 * 
+	 * @param dto  a marker dto containing the information needed to make a marker
+	 */
+	// TODO: test
+	public static void addSanitizer(MarkerDTO dto) {
+		try {
+			IMarker sanitizerMarker = MarkerAdapter.adapt(dto, IMarker.BOOKMARK);
+			sanitizerMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_INFO);
+			sanitizerMarker.setAttribute(IMarker.MESSAGE, String.format("Sanitizer: %s", dto.text));
 
 		} catch (Exception e) {
 			// TODO : log

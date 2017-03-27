@@ -4,11 +4,11 @@ import us.coastalhacking.corvus.annotations.ui.common.AnnotationController;
 import us.coastalhacking.corvus.annotations.ui.common.MarkerDTO;
 
 
-public class AddIssueHandler extends AbstractHandler {
+public class AddTaintHandler extends AbstractHandler {
 
 	@Override
 	public void doExecute(MarkerDTO dto) {
-		AnnotationController.addIssue(dto);
+		AnnotationController.addTaint(dto);
 		
 	}
 
