@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_BxaXACerEeWxCPrV0pAZQQ">
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_QqSikIrOEeW7h_qdP9N9fw" featurename="commands" parentElementId="xpath:/">
+    <elements xsi:type="commands:Command" xmi:id="_UCYfwIrOEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.command.entrypoint" commandName="Add Entry Point"/>
+    <elements xsi:type="commands:Command" xmi:id="_oEDqIBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.command.sink" commandName="Add Sink"/>
+    <elements xsi:type="commands:Command" xmi:id="_rOPuMBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.command.issue" commandName="Add Issue"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_fW12kIrOEeW7h_qdP9N9fw" featurename="handlers" parentElementId="xpath:/">
+    <elements xsi:type="commands:Handler" xmi:id="_k2L0IIrOEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.handler.entrypoint" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddEntryPointHandler" command="_UCYfwIrOEeW7h_qdP9N9fw"/>
+    <elements xsi:type="commands:Handler" xmi:id="_umjGwBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.handler.sink" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddSinkHandler" command="_oEDqIBM2EeelOaUwhH4ISg"/>
+    <elements xsi:type="commands:Handler" xmi:id="_vQliQBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.handler.issue" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddIssueHandler" command="_rOPuMBM2EeelOaUwhH4ISg"/>
+  </fragments>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_pVgfIIrOEeW7h_qdP9N9fw" featurename="menuContributions" parentElementId="xpath:/">
+    <elements xsi:type="menu:MenuContribution" xmi:id="_BducUIrPEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.menu.popup" positionInParent="after=additions" parentId="popup">
+      <children xsi:type="menu:Menu" xmi:id="_Dtii0IrPEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.menu.corvus" label="Corvus" iconURI="">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_Dtii0YrPEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.menu.corvus.addentrypoint" label="Add Entry Point" iconURI="" command="_UCYfwIrOEeW7h_qdP9N9fw"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_gkNNYBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.corvus.addsink" label="Add Sink" command="_oEDqIBM2EeelOaUwhH4ISg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_jx0Y4BM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.corvus.addissue" label="Add Issue" command="_rOPuMBM2EeelOaUwhH4ISg"/>
+      </children>
+    </elements>
+  </fragments>
+</fragment:ModelFragments>
