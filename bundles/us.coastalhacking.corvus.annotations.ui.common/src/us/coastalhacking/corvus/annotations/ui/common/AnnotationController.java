@@ -2,6 +2,8 @@ package us.coastalhacking.corvus.annotations.ui.common;
 
 import org.eclipse.core.resources.IMarker;
 
+import us.coastalhacking.corvus.annotations.Markers;
+
 public class AnnotationController {
 
 	/**
@@ -13,7 +15,7 @@ public class AnnotationController {
 	public static void addEntryPoint(MarkerDTO dto) {
 		try {
 			// Create entry point
-			IMarker entryPointMarker = MarkerAdapter.adapt(dto, IMarker.BOOKMARK);
+			IMarker entryPointMarker = MarkerAdapter.adapt(dto, Markers.ENTRY_POINT);
 			entryPointMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_INFO);
 			entryPointMarker.setAttribute(IMarker.MESSAGE, String.format("Entry point: %s", dto.text));
 
@@ -46,7 +48,7 @@ public class AnnotationController {
 	public static void addSink(MarkerDTO dto) {
 		try {
 			// Create sink
-			IMarker sinkMarker = MarkerAdapter.adapt(dto, IMarker.BOOKMARK);
+			IMarker sinkMarker = MarkerAdapter.adapt(dto, Markers.SINK);
 			sinkMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_WARNING);
 			sinkMarker.setAttribute(IMarker.MESSAGE, String.format("Sink: %s", dto.text));
 
@@ -72,7 +74,7 @@ public class AnnotationController {
 	public static void addIssue(MarkerDTO dto) {
 		try {
 			// Create issue
-			IMarker issueMarker = MarkerAdapter.adapt(dto, IMarker.PROBLEM);
+			IMarker issueMarker = MarkerAdapter.adapt(dto, Markers.ISSUE);
 			issueMarker.setAttribute(IMarker.MESSAGE, String.format("Security issue with %s", dto.text));
 			issueMarker.setAttribute(IMarker.PRIORITY, IMarker.PRIORITY_HIGH);
 			issueMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
@@ -97,7 +99,7 @@ public class AnnotationController {
 	// TODO: test
 	public static void addTaint(MarkerDTO dto) {
 		try {
-			IMarker taintMarker = MarkerAdapter.adapt(dto, IMarker.PROBLEM);
+			IMarker taintMarker = MarkerAdapter.adapt(dto, Markers.TAINT);
 			taintMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_INFO);
 			taintMarker.setAttribute(IMarker.MESSAGE, String.format("Tainted: %s", dto.text));
 
@@ -116,7 +118,7 @@ public class AnnotationController {
 	// TODO: test
 	public static void addSanitizer(MarkerDTO dto) {
 		try {
-			IMarker sanitizerMarker = MarkerAdapter.adapt(dto, IMarker.BOOKMARK);
+			IMarker sanitizerMarker = MarkerAdapter.adapt(dto, Markers.SANITIZER);
 			sanitizerMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_INFO);
 			sanitizerMarker.setAttribute(IMarker.MESSAGE, String.format("Sanitizer: %s", dto.text));
 

@@ -16,5 +16,6 @@
 		<module>us.coastalhacking.corvus.annotations.ui.common</module>
 		<module>us.coastalhacking.corvus.annotations.ui.e3</module>
 		<module>us.coastalhacking.corvus.annotations.ui.e4</module>
+		<module>us.coastalhacking.corvus.annotations.api</module>
 	</modules>
 </project>

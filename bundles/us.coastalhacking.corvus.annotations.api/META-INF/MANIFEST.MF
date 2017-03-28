@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Corvus Annotations API
+Bundle-SymbolicName: us.coastalhacking.corvus.annotations.api;singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Bundle-Vendor: Coastal Hacking
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: us.coastalhacking.corvus.annotations
