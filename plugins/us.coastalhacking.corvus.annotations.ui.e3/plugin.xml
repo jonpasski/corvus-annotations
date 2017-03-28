@@ -100,6 +100,39 @@
             commandId="us.coastalhacking.corvus.annotations.command.e3.addsink">
       </handler>
    </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="us.coastalhacking.corvus.annotations.command.e3.addentrypoint"
+            contextId="org.eclipse.ui.textEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M2+A E">
+      </key>
+      <key
+            commandId="us.coastalhacking.corvus.annotations.command.e3.addsink"
+            contextId="org.eclipse.ui.textEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M2+A S">
+      </key>
+      <key
+            commandId="us.coastalhacking.corvus.annotations.command.e3.addissue"
+            contextId="org.eclipse.ui.textEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M2+A I">
+      </key>
+      <key
+            commandId="us.coastalhacking.corvus.annotations.command.e3.addtaint"
+            contextId="org.eclipse.ui.textEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M2+A T">
+      </key>
+      <key
+            commandId="us.coastalhacking.corvus.annotations.command.e3.addsanitizer"
+            contextId="org.eclipse.ui.textEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M2+A Z">
+      </key>
+   </extension>
 
 
 </plugin>
