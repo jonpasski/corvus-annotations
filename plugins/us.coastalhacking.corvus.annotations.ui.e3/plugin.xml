@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               id="us.coastalhacking.corvus.annotations.menu.e3"
+               label="Corvus">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <iterate
+                        ifEmpty="false"
+                        operator="or">
+                     <instanceof
+                           value="org.eclipse.jface.text.ITextSelection">
+                     </instanceof>
+                  </iterate>
+               </with>
+            </visibleWhen>
+            <command
+                  commandId="us.coastalhacking.corvus.annotations.command.e3.addentrypoint"
+                  label="Add Entry Point"
+                  style="push">
+            </command>
+            <command
+                  commandId="us.coastalhacking.corvus.annotations.command.e3.addsink"
+                  label="Add Sink"
+                  style="push">
+            </command>
+            <command
+                  commandId="us.coastalhacking.corvus.annotations.command.e3.addissue"
+                  label="Add Issue"
+                  style="push">
+            </command>
+            <menu
+                  id="us.coastalhacking.corvus.annotations.menu.e3.dataflow"
+                  label="Dataflow...">
+               <command
+                     commandId="us.coastalhacking.corvus.annotations.command.e3.addtaint"
+                     label="Add Taint"
+                     style="push">
+               </command>
+               <command
+                     commandId="us.coastalhacking.corvus.annotations.command.e3.addsanitizer"
+                     label="Add Sanitizer"
+                     style="push">
+               </command>
+            </menu>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="us.coastalhacking.corvus.annotations.command.e3.addentrypoint"
+            name="Add Entry Point">
+      </command>
+      <command
+            id="us.coastalhacking.corvus.annotations.command.e3.addsink"
+            name="Add Sink">
+      </command>
+      <command
+            id="us.coastalhacking.corvus.annotations.command.e3.addissue"
+            name="Add Issue">
+      </command>
+      <command
+            id="us.coastalhacking.corvus.annotations.command.e3.addtaint"
+            name="Add Taint">
+      </command>
+      <command
+            id="us.coastalhacking.corvus.annotations.command.e3.addsanitizer"
+            name="Add Sanitizer">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="us.coastalhacking.corvus.annotations.ui.e3.AddEntryPointHandler"
+            commandId="us.coastalhacking.corvus.annotations.command.e3.addentrypoint">
+      </handler>
+      <handler
+            class="us.coastalhacking.corvus.annotations.ui.e3.AddSanitizerHandler"
+            commandId="us.coastalhacking.corvus.annotations.command.e3.addsanitizer">
+      </handler>
+      <handler
+            class="us.coastalhacking.corvus.annotations.ui.e3.AddTaintHandler"
+            commandId="us.coastalhacking.corvus.annotations.command.e3.addtaint">
+      </handler>
+      <handler
+            class="us.coastalhacking.corvus.annotations.ui.e3.AddIssueHandler"
+            commandId="us.coastalhacking.corvus.annotations.command.e3.addissue">
+      </handler>
+      <handler
+            class="us.coastalhacking.corvus.annotations.ui.e3.AddSinkHandler"
+            commandId="us.coastalhacking.corvus.annotations.command.e3.addsink">
+      </handler>
+   </extension>
+
+
+</plugin>

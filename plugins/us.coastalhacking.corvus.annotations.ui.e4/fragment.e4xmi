@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="ASCII"?>
-<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_BxaXACerEeWxCPrV0pAZQQ">
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmlns:ui="http://www.eclipse.org/ui/2010/UIModel/application/ui" xmi:id="_BxaXACerEeWxCPrV0pAZQQ">
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_QqSikIrOEeW7h_qdP9N9fw" featurename="commands" parentElementId="xpath:/">
-    <elements xsi:type="commands:Command" xmi:id="_UCYfwIrOEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.command.entrypoint" commandName="Add Entry Point"/>
-    <elements xsi:type="commands:Command" xmi:id="_oEDqIBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.command.sink" commandName="Add Sink"/>
-    <elements xsi:type="commands:Command" xmi:id="_rOPuMBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.command.issue" commandName="Add Issue"/>
-    <elements xsi:type="commands:Command" xmi:id="_aZugwBM5EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.command.taint" commandName="Add Taint"/>
-    <elements xsi:type="commands:Command" xmi:id="_eab9IBM5EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.command.sanitizer" commandName="Add Sanitizer"/>
+    <elements xsi:type="commands:Command" xmi:id="_UCYfwIrOEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.command.e4.addentrypoint" commandName="Add Entry Point"/>
+    <elements xsi:type="commands:Command" xmi:id="_oEDqIBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.command.e4.addsink" commandName="Add Sink"/>
+    <elements xsi:type="commands:Command" xmi:id="_rOPuMBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.command.e4.addissue" commandName="Add Issue"/>
+    <elements xsi:type="commands:Command" xmi:id="_aZugwBM5EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.command.e4.addtaint" commandName="Add Taint"/>
+    <elements xsi:type="commands:Command" xmi:id="_eab9IBM5EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.command.e4.addsanitizer" commandName="Add Sanitizer"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_fW12kIrOEeW7h_qdP9N9fw" featurename="handlers" parentElementId="xpath:/">
-    <elements xsi:type="commands:Handler" xmi:id="_k2L0IIrOEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.handler.entrypoint" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddEntryPointHandler" command="_UCYfwIrOEeW7h_qdP9N9fw"/>
-    <elements xsi:type="commands:Handler" xmi:id="_umjGwBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.handler.sink" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddSinkHandler" command="_oEDqIBM2EeelOaUwhH4ISg"/>
-    <elements xsi:type="commands:Handler" xmi:id="_vQliQBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.handler.issue" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddIssueHandler" command="_rOPuMBM2EeelOaUwhH4ISg"/>
-    <elements xsi:type="commands:Handler" xmi:id="_hXQTkBM5EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.handler.taint" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddTaintHandler" command="_aZugwBM5EeelOaUwhH4ISg"/>
-    <elements xsi:type="commands:Handler" xmi:id="_lNlr8BM5EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.handler.sanitizer" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddSanitizerHandler" command="_eab9IBM5EeelOaUwhH4ISg"/>
+    <elements xsi:type="commands:Handler" xmi:id="_k2L0IIrOEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.handler.e4.addentrypoint" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddEntryPointHandler" command="_UCYfwIrOEeW7h_qdP9N9fw"/>
+    <elements xsi:type="commands:Handler" xmi:id="_umjGwBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.handler.e4.addsink" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddSinkHandler" command="_oEDqIBM2EeelOaUwhH4ISg"/>
+    <elements xsi:type="commands:Handler" xmi:id="_vQliQBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.handler.e4.addissue" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddIssueHandler" command="_rOPuMBM2EeelOaUwhH4ISg"/>
+    <elements xsi:type="commands:Handler" xmi:id="_hXQTkBM5EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.handler.e4.addtaint" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddTaintHandler" command="_aZugwBM5EeelOaUwhH4ISg"/>
+    <elements xsi:type="commands:Handler" xmi:id="_lNlr8BM5EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.handler.e4.addsanitizer" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddSanitizerHandler" command="_eab9IBM5EeelOaUwhH4ISg"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_pVgfIIrOEeW7h_qdP9N9fw" featurename="menuContributions" parentElementId="xpath:/">
-    <elements xsi:type="menu:MenuContribution" xmi:id="_BducUIrPEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.menu.popup" positionInParent="after=additions" parentId="popup">
-      <children xsi:type="menu:Menu" xmi:id="_Dtii0IrPEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.menu.corvus" label="Corvus" iconURI="">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_Dtii0YrPEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.menu.corvus.addentrypoint" label="Add Entry Point" iconURI="" command="_UCYfwIrOEeW7h_qdP9N9fw"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_gkNNYBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.corvus.addsink" label="Add Sink" command="_oEDqIBM2EeelOaUwhH4ISg"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_jx0Y4BM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.corvus.addissue" label="Add Issue" command="_rOPuMBM2EeelOaUwhH4ISg"/>
-        <children xsi:type="menu:Menu" xmi:id="_N7svQBM4EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.corvus.dataflow" label="Dataflow...">
-          <children xsi:type="menu:HandledMenuItem" xmi:id="_Rhme8BM4EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.corvus.addtaint" label="Add Taint" command="_aZugwBM5EeelOaUwhH4ISg"/>
-          <children xsi:type="menu:HandledMenuItem" xmi:id="_VVOhkBM4EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.corvus.addsanitizer" label="Add Sanitizer" command="_eab9IBM5EeelOaUwhH4ISg"/>
+    <elements xsi:type="menu:MenuContribution" xmi:id="_BducUIrPEeW7h_qdP9N9fw" elementId="" positionInParent="after=additions" parentId="popup">
+      <children xsi:type="menu:Menu" xmi:id="_Dtii0IrPEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.menu.popup.e4" visible="false" label="Corvus" iconURI="">
+        <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_iKTNwBPAEeelOaUwhH4ISg" coreExpressionId="us.coastalhacking.corvus.annotations.ui.e4.expression.structuredselection"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_Dtii0YrPEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.menu.e4.addentrypoint" label="Add Entry Point" iconURI="" command="_UCYfwIrOEeW7h_qdP9N9fw"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_gkNNYBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addsink" label="Add Sink" command="_oEDqIBM2EeelOaUwhH4ISg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_jx0Y4BM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addissue" label="Add Issue" command="_rOPuMBM2EeelOaUwhH4ISg"/>
+        <children xsi:type="menu:Menu" xmi:id="_N7svQBM4EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.dataflow" label="Dataflow...">
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_Rhme8BM4EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addtaint" label="Add Taint" command="_aZugwBM5EeelOaUwhH4ISg"/>
+          <children xsi:type="menu:HandledMenuItem" xmi:id="_VVOhkBM4EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addsanitizer" label="Add Sanitizer" command="_eab9IBM5EeelOaUwhH4ISg"/>
         </children>
       </children>
     </elements>

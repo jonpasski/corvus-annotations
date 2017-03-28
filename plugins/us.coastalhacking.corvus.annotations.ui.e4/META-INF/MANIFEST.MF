@@ -10,7 +10,9 @@ Require-Bundle: javax.inject,
  org.eclipse.e4.core.di.annotations,
  org.eclipse.core.runtime,
  org.eclipse.e4.core.services,
- org.eclipse.core.resources
+ org.eclipse.core.resources,
+ org.eclipse.jdt.core,
+ org.eclipse.core.expressions
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: javax.annotation;version="1.2.0",
  us.coastalhacking.corvus.annotations.ui.common

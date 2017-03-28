@@ -7,7 +7,7 @@ import us.coastalhacking.corvus.annotations.ui.common.MarkerDTO;
 public class AddTaintHandler extends AbstractHandler {
 
 	@Override
-	public void doExecute(MarkerDTO dto) {
+	protected void doExecute(MarkerDTO dto) {
 		AnnotationController.addTaint(dto);
 		
 	}

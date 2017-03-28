@@ -10,5 +10,21 @@
             uri="fragment.e4xmi">
       </fragment>
    </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="us.coastalhacking.corvus.annotations.ui.e4.expression.structuredselection">
+         <with
+               variable="org.eclipse.ui.selection">
+            <iterate
+                  ifEmpty="false"
+                  operator="or">
+               <instanceof
+                     value="org.eclipse.jdt.core.IJavaElement">
+               </instanceof>
+            </iterate>
+         </with>
+      </definition>
+   </extension>
 
 </plugin>

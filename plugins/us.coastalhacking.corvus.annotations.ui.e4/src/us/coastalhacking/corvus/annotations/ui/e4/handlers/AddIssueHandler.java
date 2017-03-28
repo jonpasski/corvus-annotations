@@ -7,7 +7,7 @@ import us.coastalhacking.corvus.annotations.ui.common.MarkerDTO;
 public class AddIssueHandler extends AbstractHandler {
 
 	@Override
-	public void doExecute(MarkerDTO dto) {
+	protected void doExecute(MarkerDTO dto) {
 		AnnotationController.addIssue(dto);
 		
 	}
