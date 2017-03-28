@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>us.coastalhacking.corvus.annotations.bundles</artifactId>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>us.coastalhacking.corvus.annotations</groupId>
+		<artifactId>us.coastalhacking.corvus.annotations.root</artifactId>
+		<version>0.1.0-SNAPSHOT</version>
+	</parent>
+	
+	<modules>
+		<module>us.coastalhacking.corvus.annotations.ui.common</module>
+		<module>us.coastalhacking.corvus.annotations.ui.e3</module>
+		<module>us.coastalhacking.corvus.annotations.ui.e4</module>
+	</modules>
+</project>
