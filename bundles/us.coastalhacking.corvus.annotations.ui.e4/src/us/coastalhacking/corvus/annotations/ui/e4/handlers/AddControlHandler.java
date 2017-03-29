@@ -4,11 +4,11 @@ import us.coastalhacking.corvus.annotations.ui.common.AnnotationController;
 import us.coastalhacking.corvus.annotations.ui.common.MarkerDTO;
 
 
-public class AddSanitizerHandler extends AbstractHandler {
+public class AddControlHandler extends AbstractHandler {
 
 	@Override
 	protected void doExecute(MarkerDTO dto) {
-		AnnotationController.addSanitizer(dto);
+		AnnotationController.addControl(dto);
 		
 	}
 

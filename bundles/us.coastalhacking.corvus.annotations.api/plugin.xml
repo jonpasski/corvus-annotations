@@ -77,20 +77,6 @@
       </attribute>
    </extension>
    <extension
-         id="us.coastalhacking.corvus.annotations.sanitizer"
-         name="Data Sanitizer"
-         point="org.eclipse.core.resources.markers">
-      <persistent
-            value="true">
-      </persistent>
-      <super
-            type="org.eclipse.core.resources.bookmark">
-      </super>
-      <super
-            type="org.eclipse.core.resources.textmarker">
-      </super>
-   </extension>
-   <extension
          id="us.coastalhacking.corvus.annotations.taint"
          name="Tainted Data"
          point="org.eclipse.core.resources.markers">

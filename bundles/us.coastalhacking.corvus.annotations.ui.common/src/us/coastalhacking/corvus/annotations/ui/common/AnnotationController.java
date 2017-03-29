@@ -120,26 +120,7 @@ public class AnnotationController {
 			e.printStackTrace();
 		}
 	}
-	
-	/**
-	 * 
-	 * Creates a sanitizer marker
-	 * 
-	 * @deprecated
-	 * @param dto  a marker dto containing the information needed to make a marker
-	 */
-	// TODO: test
-	public static void addSanitizer(MarkerDTO dto) {
-		try {
-			IMarker sanitizerMarker = MarkerAdapter.adapt(dto, Markers.SANITIZER);
-			sanitizerMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_INFO);
-			sanitizerMarker.setAttribute(IMarker.MESSAGE, String.format("Sanitizer: %s", dto.text));
 
-		} catch (Exception e) {
-			// TODO : log
-			e.printStackTrace();
-		}
-	}
 	
 	/**
 	 * 

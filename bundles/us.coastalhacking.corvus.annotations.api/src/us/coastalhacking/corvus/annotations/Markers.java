@@ -23,9 +23,6 @@ public interface Markers {
 	public String CONTROL_ATTR_DETAILS = "controldetails";
 	public String CONTROL_ATTR_CONTROL_TYPE = "controltype";
 
-	public String SANITIZER = "us.coastalhacking.corvus.annotations.sanitizer";
-	public String SANITIZER_TYPE = "Data Sanitizer";
-
 	public String SINK = "us.coastalhacking.corvus.annotations.sink";
 	public String SINK_TYPE = "Sink";
 	public String SINK_ATTR_SINK_TYPE = "sinktype";

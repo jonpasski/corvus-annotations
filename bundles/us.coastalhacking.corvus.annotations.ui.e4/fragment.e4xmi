@@ -5,14 +5,14 @@
     <elements xsi:type="commands:Command" xmi:id="_oEDqIBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.command.e4.addsink" commandName="Add Sink"/>
     <elements xsi:type="commands:Command" xmi:id="_rOPuMBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.command.e4.addissue" commandName="Add Issue"/>
     <elements xsi:type="commands:Command" xmi:id="_aZugwBM5EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.command.e4.addtaint" commandName="Add Taint"/>
-    <elements xsi:type="commands:Command" xmi:id="_eab9IBM5EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.command.e4.addsanitizer" commandName="Add Sanitizer"/>
+    <elements xsi:type="commands:Command" xmi:id="_eab9IBM5EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.command.e4.addcontrol" commandName="Add Control"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_fW12kIrOEeW7h_qdP9N9fw" featurename="handlers" parentElementId="xpath:/">
     <elements xsi:type="commands:Handler" xmi:id="_k2L0IIrOEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.handler.e4.addentrypoint" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddEntryPointHandler" command="_UCYfwIrOEeW7h_qdP9N9fw"/>
     <elements xsi:type="commands:Handler" xmi:id="_umjGwBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.handler.e4.addsink" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddSinkHandler" command="_oEDqIBM2EeelOaUwhH4ISg"/>
     <elements xsi:type="commands:Handler" xmi:id="_vQliQBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.handler.e4.addissue" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddIssueHandler" command="_rOPuMBM2EeelOaUwhH4ISg"/>
     <elements xsi:type="commands:Handler" xmi:id="_hXQTkBM5EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.handler.e4.addtaint" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddTaintHandler" command="_aZugwBM5EeelOaUwhH4ISg"/>
-    <elements xsi:type="commands:Handler" xmi:id="_lNlr8BM5EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.handler.e4.addsanitizer" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddSanitizerHandler" command="_eab9IBM5EeelOaUwhH4ISg"/>
+    <elements xsi:type="commands:Handler" xmi:id="_lNlr8BM5EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.handler.e4.addcontrol" contributionURI="bundleclass://us.coastalhacking.corvus.annotations.ui.e4/us.coastalhacking.corvus.annotations.ui.e4.handlers.AddControlHandler" command="_eab9IBM5EeelOaUwhH4ISg"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_pVgfIIrOEeW7h_qdP9N9fw" featurename="menuContributions" parentElementId="xpath:/">
     <elements xsi:type="menu:MenuContribution" xmi:id="_BducUIrPEeW7h_qdP9N9fw" elementId="" positionInParent="after=additions" parentId="popup">
@@ -21,10 +21,8 @@
         <children xsi:type="menu:HandledMenuItem" xmi:id="_Dtii0YrPEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.menu.e4.addentrypoint" label="Add Entry Point" iconURI="" command="_UCYfwIrOEeW7h_qdP9N9fw"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_gkNNYBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addsink" label="Add Sink" command="_oEDqIBM2EeelOaUwhH4ISg"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_jx0Y4BM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addissue" label="Add Issue" command="_rOPuMBM2EeelOaUwhH4ISg"/>
-        <children xsi:type="menu:Menu" xmi:id="_N7svQBM4EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.dataflow" label="Dataflow...">
-          <children xsi:type="menu:HandledMenuItem" xmi:id="_Rhme8BM4EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addtaint" label="Add Taint" command="_aZugwBM5EeelOaUwhH4ISg"/>
-          <children xsi:type="menu:HandledMenuItem" xmi:id="_VVOhkBM4EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addsanitizer" label="Add Sanitizer" command="_eab9IBM5EeelOaUwhH4ISg"/>
-        </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_Rhme8BM4EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addtaint" label="Add Taint" command="_aZugwBM5EeelOaUwhH4ISg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_VVOhkBM4EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addcontrol" label="Add Control" command="_eab9IBM5EeelOaUwhH4ISg"/>
       </children>
     </elements>
   </fragments>

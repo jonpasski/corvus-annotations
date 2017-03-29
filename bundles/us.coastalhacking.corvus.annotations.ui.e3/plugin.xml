@@ -38,13 +38,13 @@
                   style="push">
             </command>
             <command
-                  commandId="us.coastalhacking.corvus.annotations.command.e3.addcontrol"
-                  label="Add Control"
+                  commandId="us.coastalhacking.corvus.annotations.command.e3.addtaint"
+                  label="Add Taint"
                   style="push">
             </command>
             <command
-                  commandId="us.coastalhacking.corvus.annotations.command.e3.addtaint"
-                  label="Add Taint"
+                  commandId="us.coastalhacking.corvus.annotations.command.e3.addcontrol"
+                  label="Add Control"
                   style="push">
             </command>
          </menu>
@@ -69,10 +69,6 @@
             name="Add Taint">
       </command>
       <command
-            id="us.coastalhacking.corvus.annotations.command.e3.addsanitizer"
-            name="Add Sanitizer">
-      </command>
-      <command
             id="us.coastalhacking.corvus.annotations.command.e3.addcontrol"
             name="Add Control">
       </command>
@@ -84,20 +80,16 @@
             commandId="us.coastalhacking.corvus.annotations.command.e3.addentrypoint">
       </handler>
       <handler
-            class="us.coastalhacking.corvus.annotations.ui.e3.AddSanitizerHandler"
-            commandId="us.coastalhacking.corvus.annotations.command.e3.addsanitizer">
-      </handler>
-      <handler
-            class="us.coastalhacking.corvus.annotations.ui.e3.AddTaintHandler"
-            commandId="us.coastalhacking.corvus.annotations.command.e3.addtaint">
+            class="us.coastalhacking.corvus.annotations.ui.e3.AddSinkHandler"
+            commandId="us.coastalhacking.corvus.annotations.command.e3.addsink">
       </handler>
       <handler
             class="us.coastalhacking.corvus.annotations.ui.e3.AddIssueHandler"
             commandId="us.coastalhacking.corvus.annotations.command.e3.addissue">
       </handler>
       <handler
-            class="us.coastalhacking.corvus.annotations.ui.e3.AddSinkHandler"
-            commandId="us.coastalhacking.corvus.annotations.command.e3.addsink">
+            class="us.coastalhacking.corvus.annotations.ui.e3.AddTaintHandler"
+            commandId="us.coastalhacking.corvus.annotations.command.e3.addtaint">
       </handler>
       <handler
             class="us.coastalhacking.corvus.annotations.ui.e3.AddControlHandler"
@@ -129,12 +121,6 @@
             contextId="org.eclipse.ui.textEditorScope"
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
             sequence="M1+M2+A T">
-      </key>
-      <key
-            commandId="us.coastalhacking.corvus.annotations.command.e3.addsanitizer"
-            contextId="org.eclipse.ui.textEditorScope"
-            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
-            sequence="M1+M2+A Z">
       </key>
       <key
             commandId="us.coastalhacking.corvus.annotations.command.e3.addcontrol"
