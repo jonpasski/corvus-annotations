@@ -17,11 +17,17 @@ public class AnnotationController {
 			// Create entry point
 			IMarker entryPointMarker = MarkerAdapter.adapt(dto, Markers.ENTRY_POINT);
 			entryPointMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_INFO);
-			entryPointMarker.setAttribute(IMarker.MESSAGE, String.format("Entry point: %s", dto.text));
+			entryPointMarker.setAttribute(IMarker.USER_EDITABLE, true);
+			entryPointMarker.setAttribute(Markers.EP_ATTR_METHOD, Markers.EMPTY_STRING);
+			entryPointMarker.setAttribute(Markers.EP_ATTR_URL, Markers.EMPTY_STRING);
+			entryPointMarker.setAttribute(Markers.EP_ATTR_AUTHN, Markers.EMPTY_STRING);
+			entryPointMarker.setAttribute(Markers.EP_ATTR_AUTHZ, Markers.EMPTY_STRING);
+			entryPointMarker.setAttribute(Markers.EP_ATTR_CSRF, Markers.EMPTY_STRING);
+			entryPointMarker.setAttribute(IMarker.MESSAGE, dto.text);
 
 			// Create tasks around entry point
 			IMarker idempotentMarker = MarkerAdapter.adapt(dto, IMarker.TASK);
-			idempotentMarker.setAttribute(IMarker.MESSAGE, String.format("Review idempotency on entry point %s", dto.text));
+			idempotentMarker.setAttribute(IMarker.MESSAGE, String.format("Review CSRF susceptibility on entry point %s", dto.text));
 			idempotentMarker.setAttribute(IMarker.PRIORITY, IMarker.PRIORITY_HIGH);
 
 			IMarker authenticationMarker = MarkerAdapter.adapt(dto, IMarker.TASK);
@@ -49,8 +55,12 @@ public class AnnotationController {
 		try {
 			// Create sink
 			IMarker sinkMarker = MarkerAdapter.adapt(dto, Markers.SINK);
+			sinkMarker.setAttribute(IMarker.USER_EDITABLE, true);
 			sinkMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_WARNING);
-			sinkMarker.setAttribute(IMarker.MESSAGE, String.format("Sink: %s", dto.text));
+			sinkMarker.setAttribute(IMarker.MESSAGE, dto.text);
+			sinkMarker.setAttribute(Markers.SINK_ATTR_DETAILS, Markers.EMPTY_STRING);
+			sinkMarker.setAttribute(Markers.SINK_ATTR_SINK_TYPE, Markers.EMPTY_STRING);
+			sinkMarker.setAttribute(Markers.SINK_ATTR_CWE, Markers.EMPTY_STRING);
 
 			// Create tasks around sink
 			IMarker controllabilityMarker = MarkerAdapter.adapt(dto, IMarker.TASK);
@@ -75,6 +85,7 @@ public class AnnotationController {
 		try {
 			// Create issue
 			IMarker issueMarker = MarkerAdapter.adapt(dto, Markers.ISSUE);
+			issueMarker.setAttribute(IMarker.USER_EDITABLE, true);
 			issueMarker.setAttribute(IMarker.MESSAGE, String.format("Security issue with %s", dto.text));
 			issueMarker.setAttribute(IMarker.PRIORITY, IMarker.PRIORITY_HIGH);
 			issueMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
@@ -100,8 +111,9 @@ public class AnnotationController {
 	public static void addTaint(MarkerDTO dto) {
 		try {
 			IMarker taintMarker = MarkerAdapter.adapt(dto, Markers.TAINT);
+			taintMarker.setAttribute(IMarker.USER_EDITABLE, true);
 			taintMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_INFO);
-			taintMarker.setAttribute(IMarker.MESSAGE, String.format("Tainted: %s", dto.text));
+			taintMarker.setAttribute(IMarker.MESSAGE, dto.text);
 
 		} catch (Exception e) {
 			// TODO : log
@@ -113,6 +125,7 @@ public class AnnotationController {
 	 * 
 	 * Creates a sanitizer marker
 	 * 
+	 * @deprecated
 	 * @param dto  a marker dto containing the information needed to make a marker
 	 */
 	// TODO: test
@@ -121,6 +134,27 @@ public class AnnotationController {
 			IMarker sanitizerMarker = MarkerAdapter.adapt(dto, Markers.SANITIZER);
 			sanitizerMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_INFO);
 			sanitizerMarker.setAttribute(IMarker.MESSAGE, String.format("Sanitizer: %s", dto.text));
+
+		} catch (Exception e) {
+			// TODO : log
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Creates a control marker
+	 * 
+	 * @param dto  a marker dto containing the information needed to make a marker
+	 */
+	// TODO: test
+	public static void addControl(MarkerDTO dto) {
+		try {
+			IMarker controlMarker = MarkerAdapter.adapt(dto, Markers.CONTROL);
+			controlMarker.setAttribute(IMarker.USER_EDITABLE, true);
+			controlMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_INFO);
+			controlMarker.setAttribute(IMarker.MESSAGE, dto.text);
+			controlMarker.setAttribute(Markers.CONTROL_ATTR_DETAILS, Markers.EMPTY_STRING);
 
 		} catch (Exception e) {
 			// TODO : log

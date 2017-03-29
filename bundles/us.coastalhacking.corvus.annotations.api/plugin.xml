@@ -14,24 +14,31 @@
       <super
             type="org.eclipse.core.resources.textmarker">
       </super>
+      <attribute
+            name="method">
+      </attribute>
+      <attribute
+            name="csrf">
+      </attribute>
+      <attribute
+            name="idempotency">
+      </attribute>
+      <attribute
+            name="csrf">
+      </attribute>
+      <attribute
+            name="authorization">
+      </attribute>
+      <attribute
+            name="authentication">
+      </attribute>
+      <attribute
+            name="url">
+      </attribute>
    </extension>
    <extension
-         id="us.coastalhacking.corvus.annotations.issue"
-         name="Security Issue"
-         point="org.eclipse.core.resources.markers">
-      <persistent
-            value="true">
-      </persistent>
-      <super
-            type="org.eclipse.core.resources.problem">
-      </super>
-      <super
-            type="org.eclipse.core.resources.textmarker">
-      </super>
-   </extension>
-   <extension
-         id="us.coastalhacking.corvus.annotations.sanitizer"
-         name="Data Sanitizer"
+         id="us.coastalhacking.corvus.annotations.sink"
+         name="Sink"
          point="org.eclipse.core.resources.markers">
       <persistent
             value="true">
@@ -42,10 +49,36 @@
       <super
             type="org.eclipse.core.resources.textmarker">
       </super>
+      <attribute
+            name="sinkdetails">
+      </attribute>
+      <attribute
+            name="sinktype">
+      </attribute>
+      <attribute
+            name="cwe">
+      </attribute>
    </extension>
    <extension
-         id="us.coastalhacking.corvus.annotations.sink"
-         name="Sink"
+         id="us.coastalhacking.corvus.annotations.issue"
+         name="Security Issue"
+         point="org.eclipse.core.resources.markers">
+      <persistent
+            value="true">
+      </persistent>
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <super
+            type="org.eclipse.core.resources.textmarker">
+      </super>
+      <attribute
+            name="issuedetails">
+      </attribute>
+   </extension>
+   <extension
+         id="us.coastalhacking.corvus.annotations.sanitizer"
+         name="Data Sanitizer"
          point="org.eclipse.core.resources.markers">
       <persistent
             value="true">
@@ -65,10 +98,36 @@
             value="true">
       </persistent>
       <super
-            type="org.eclipse.core.resources.problem">
+            type="org.eclipse.core.resources.problemmarker">
       </super>
       <super
             type="org.eclipse.core.resources.textmarker">
       </super>
+      <attribute
+            name="tainttype">
+      </attribute>
+      <attribute
+            name="taintdetails">
+      </attribute>
+   </extension>
+   <extension
+         id="us.coastalhacking.corvus.annotations.control"
+         name="Control"
+         point="org.eclipse.core.resources.markers">
+      <persistent
+            value="true">
+      </persistent>
+      <super
+            type="org.eclipse.core.resources.bookmark">
+      </super>
+      <super
+            type="org.eclipse.core.resources.textmarker">
+      </super>
+      <attribute
+            name="controldetails">
+      </attribute>
+      <attribute
+            name="controltype">
+      </attribute>
    </extension>
 </plugin>

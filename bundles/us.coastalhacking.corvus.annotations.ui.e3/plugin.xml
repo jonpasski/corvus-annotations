@@ -37,20 +37,16 @@
                   label="Add Issue"
                   style="push">
             </command>
-            <menu
-                  id="us.coastalhacking.corvus.annotations.menu.e3.dataflow"
-                  label="Dataflow...">
-               <command
-                     commandId="us.coastalhacking.corvus.annotations.command.e3.addtaint"
-                     label="Add Taint"
-                     style="push">
-               </command>
-               <command
-                     commandId="us.coastalhacking.corvus.annotations.command.e3.addsanitizer"
-                     label="Add Sanitizer"
-                     style="push">
-               </command>
-            </menu>
+            <command
+                  commandId="us.coastalhacking.corvus.annotations.command.e3.addcontrol"
+                  label="Add Control"
+                  style="push">
+            </command>
+            <command
+                  commandId="us.coastalhacking.corvus.annotations.command.e3.addtaint"
+                  label="Add Taint"
+                  style="push">
+            </command>
          </menu>
       </menuContribution>
    </extension>
@@ -76,6 +72,10 @@
             id="us.coastalhacking.corvus.annotations.command.e3.addsanitizer"
             name="Add Sanitizer">
       </command>
+      <command
+            id="us.coastalhacking.corvus.annotations.command.e3.addcontrol"
+            name="Add Control">
+      </command>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
@@ -98,6 +98,10 @@
       <handler
             class="us.coastalhacking.corvus.annotations.ui.e3.AddSinkHandler"
             commandId="us.coastalhacking.corvus.annotations.command.e3.addsink">
+      </handler>
+      <handler
+            class="us.coastalhacking.corvus.annotations.ui.e3.AddControlHandler"
+            commandId="us.coastalhacking.corvus.annotations.command.e3.addcontrol">
       </handler>
    </extension>
    <extension
@@ -132,6 +136,300 @@
             schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
             sequence="M1+M2+A Z">
       </key>
+      <key
+            commandId="us.coastalhacking.corvus.annotations.command.e3.addcontrol"
+            contextId="org.eclipse.ui.textEditorScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M2+A C">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.markerSupport">
+      <markerField
+            class="us.coastalhacking.corvus.annotations.ui.e3.EntryPointMethodField"
+            id="us.coastalhacking.corvus.annotations.entrypoint.methodField"
+            name="Method">
+      </markerField>
+      <markerField
+            class="us.coastalhacking.corvus.annotations.ui.e3.EntryPointUrlField"
+            id="us.coastalhacking.corvus.annotations.entrypoint.urlField"
+            name="URL">
+      </markerField>
+      <markerField
+            class="us.coastalhacking.corvus.annotations.ui.e3.EntryPointAuthenticationField"
+            id="us.coastalhacking.corvus.annotations.entrypoint.authenticationField"
+            name="Authentication">
+      </markerField>
+      <markerField
+            class="us.coastalhacking.corvus.annotations.ui.e3.EntryPointAuthorizationField"
+            id="us.coastalhacking.corvus.annotations.entrypoint.authorizationField"
+            name="Authorization">
+      </markerField>
+      <markerField
+            class="us.coastalhacking.corvus.annotations.ui.e3.EntryPointCsrfField"
+            id="us.coastalhacking.corvus.annotations.entrypoint.csrfField"
+            name="CSRF">
+      </markerField>
+      <markerField
+            class="us.coastalhacking.corvus.annotations.ui.e3.SinkCweField"
+            id="us.coastalhacking.corvus.annotations.sink.cweField"
+            name="CWE">
+      </markerField>
+      <markerField
+            class="us.coastalhacking.corvus.annotations.ui.e3.SinkSinkTypeField"
+            id="us.coastalhacking.corvus.annotations.sink.sinkTypeField"
+            name="Sink Type">
+      </markerField>
+      <markerField
+            class="us.coastalhacking.corvus.annotations.ui.e3.SinkDetailsField"
+            id="us.coastalhacking.corvus.annotations.sink.sinkDetailsField"
+            name="Sink Details">
+      </markerField>
+      <markerField
+            class="us.coastalhacking.corvus.annotations.ui.e3.TaintedTaintTypeField"
+            id="us.coastalhacking.corvus.annotations.taint.taintTypeField"
+            name="Taint Type">
+      </markerField>
+      <markerField
+            class="us.coastalhacking.corvus.annotations.ui.e3.TaintedDetailsField"
+            id="us.coastalhacking.corvus.annotations.taint.taintDetailsField"
+            name="Taint Details">
+      </markerField>
+      <markerField
+            class="us.coastalhacking.corvus.annotations.ui.e3.IssueDetailsField"
+            id="us.coastalhacking.corvus.annotations.issue.issueDetailsField"
+            name="Issue Details">
+      </markerField>
+      <markerField
+            class="us.coastalhacking.corvus.annotations.ui.e3.ControlControlTypeField"
+            id="us.coastalhacking.corvus.annotations.control.controlTypeField"
+            name="Control Type">
+      </markerField>
+      <markerField
+            class="us.coastalhacking.corvus.annotations.ui.e3.ControlDetailsField"
+            id="us.coastalhacking.corvus.annotations.control.controlDetailsField"
+            name="Control Details">
+      </markerField>
+      <markerContentGenerator
+            id="us.coastalhacking.corvus.annotations.entryPointGenerator"
+            name="Entry Point">
+         <markerTypeReference
+               id="us.coastalhacking.corvus.annotations.entrypoint">
+         </markerTypeReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.descriptionField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="us.coastalhacking.corvus.annotations.entrypoint.methodField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="us.coastalhacking.corvus.annotations.entrypoint.urlField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="us.coastalhacking.corvus.annotations.entrypoint.authenticationField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="us.coastalhacking.corvus.annotations.entrypoint.authorizationField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="us.coastalhacking.corvus.annotations.entrypoint.csrfField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.resourceField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.pathField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.locationField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.markerType"
+               visible="true">
+         </markerFieldReference>
+      </markerContentGenerator>
+      <markerContentGenerator
+            id="us.coastalhacking.corvus.annotations.sinkGenerator"
+            name="Sinks">
+         <markerTypeReference
+               id="us.coastalhacking.corvus.annotations.sink">
+         </markerTypeReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.descriptionField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="us.coastalhacking.corvus.annotations.sink.sinkTypeField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="us.coastalhacking.corvus.annotations.sink.sinkDetailsField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="us.coastalhacking.corvus.annotations.sink.cweField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.resourceField"
+               visible="false">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.pathField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.locationField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.markerType"
+               visible="true">
+         </markerFieldReference>
+      </markerContentGenerator>
+      <markerContentGenerator
+            id="us.coastalhacking.corvus.annotations.taintedGenerator"
+            name="Tainted Data">
+         <markerTypeReference
+               id="us.coastalhacking.corvus.annotations.taint">
+         </markerTypeReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.descriptionField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="us.coastalhacking.corvus.annotations.taint.taintTypeField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="us.coastalhacking.corvus.annotations.taint.taintDetailsField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.resourceField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.pathField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.locationField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.markerType"
+               visible="true">
+         </markerFieldReference>
+      </markerContentGenerator>
+      <markerContentGenerator
+            id="us.coastalhacking.corvus.annotations.issueGenerator"
+            name="Security Issues">
+         <markerTypeReference
+               id="us.coastalhacking.corvus.annotations.issue">
+         </markerTypeReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.descriptionField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="us.coastalhacking.corvus.annotations.issue.issueDetailsField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.resourceField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.pathField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.locationField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.markerType"
+               visible="true">
+         </markerFieldReference>
+      </markerContentGenerator>
+      <markerContentGenerator
+            id="us.coastalhacking.corvus.annotations.controlGenerator"
+            name="Controls">
+         <markerTypeReference
+               id="us.coastalhacking.corvus.annotations.control">
+         </markerTypeReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.descriptionField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="us.coastalhacking.corvus.annotations.control.controlTypeField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="us.coastalhacking.corvus.annotations.control.controlDetailsField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.resourceField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.pathField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.locationField"
+               visible="true">
+         </markerFieldReference>
+         <markerFieldReference
+               id="org.eclipse.ui.ide.markerType"
+               visible="true">
+         </markerFieldReference>
+      </markerContentGenerator>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="us.coastalhacking.corvus.annotations.ui.e3.EntryPointMarkersView"
+            id="us.coastalhacking.corvus.annotations.view.entrypoints"
+            name="Entry Points"
+            restorable="true">
+      </view>
+      <view
+            class="us.coastalhacking.corvus.annotations.ui.e3.SinkMarkersView"
+            id="us.coastalhacking.corvus.annotations.view.sinks"
+            name="Sinks"
+            restorable="true">
+      </view>
+      <view
+            class="us.coastalhacking.corvus.annotations.ui.e3.IssueMarkersView"
+            id="us.coastalhacking.corvus.annotations.view.issues"
+            name="Security Issues"
+            restorable="true">
+      </view>
+      <view
+            class="us.coastalhacking.corvus.annotations.ui.e3.ControlMarkersView"
+            id="us.coastalhacking.corvus.annotations.view.controls"
+            name="Controls"
+            restorable="true">
+      </view>
+      <view
+            class="us.coastalhacking.corvus.annotations.ui.e3.TaintedMarkersView"
+            id="us.coastalhacking.corvus.annotations.view.tainteddata"
+            name="Tainted Data"
+            restorable="true">
+      </view>
    </extension>
 
 
