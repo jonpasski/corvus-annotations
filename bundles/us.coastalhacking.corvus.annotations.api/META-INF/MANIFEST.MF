@@ -6,3 +6,5 @@ Bundle-Version: 0.1.0.qualifier
 Bundle-Vendor: Coastal Hacking
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: us.coastalhacking.corvus.annotations
+Require-Bundle: org.eclipse.core.resources,
+ org.eclipse.ui.editors

@@ -1,18 +1,15 @@
 Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
+Bundle-SymbolicName: us.coastalhacking.corvus.annotations.ui.e4;single
+ ton:=true
 Bundle-Name: Corvus Annotations e4
-Bundle-SymbolicName: us.coastalhacking.corvus.annotations.ui.e4;singleton:=true
 Bundle-Version: 0.1.0.qualifier
-Require-Bundle: javax.inject,
- org.eclipse.osgi,
- org.eclipse.jface,
- org.eclipse.e4.ui.services,
- org.eclipse.e4.core.di.annotations,
- org.eclipse.core.runtime,
- org.eclipse.e4.core.services,
- org.eclipse.core.resources,
- org.eclipse.jdt.core,
- org.eclipse.core.expressions
+Require-Bundle: javax.inject,org.eclipse.osgi,org.eclipse.jface,org.ec
+ lipse.e4.ui.services,org.eclipse.e4.core.di.annotations,org.eclipse.c
+ ore.runtime,org.eclipse.e4.core.services,org.eclipse.core.resources,o
+ rg.eclipse.jdt.core,org.eclipse.core.expressions,us.coastalhacking.co
+ rvus.annotations.api;bundle-version=0.1.0
+Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Import-Package: javax.annotation;version="1.2.0",
- us.coastalhacking.corvus.annotations.ui.common
+Import-Package: javax.annotation;version="1.2.0",us.coastalhacking.cor
+ vus.annotations.ui.common
+

@@ -9,7 +9,7 @@
             value="true">
       </persistent>
       <super
-            type="org.eclipse.core.resources.bookmark">
+            type="org.eclipse.core.resources.problemmarker">
       </super>
       <super
             type="org.eclipse.core.resources.textmarker">
@@ -44,7 +44,7 @@
             value="true">
       </persistent>
       <super
-            type="org.eclipse.core.resources.bookmark">
+            type="org.eclipse.core.resources.problemmarker">
       </super>
       <super
             type="org.eclipse.core.resources.textmarker">
@@ -104,7 +104,7 @@
             value="true">
       </persistent>
       <super
-            type="org.eclipse.core.resources.bookmark">
+            type="org.eclipse.core.resources.problemmarker">
       </super>
       <super
             type="org.eclipse.core.resources.textmarker">
@@ -115,5 +115,166 @@
       <attribute
             name="controltype">
       </attribute>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors.annotationTypes">
+      <type
+            markerType="us.coastalhacking.corvus.annotations.entrypoint"
+            name="us.coastalhacking.corvus.annotations.annotation.entrypoint">
+      </type>
+      <type
+            markerType="us.coastalhacking.corvus.annotations.sink"
+            name="us.coastalhacking.corvus.annotations.annotation.sink">
+      </type>
+      <type
+            markerType="us.coastalhacking.corvus.annotations.issue"
+            name="us.coastalhacking.corvus.annotations.annotation.issue">
+      </type>
+      <type
+            markerType="us.coastalhacking.corvus.annotations.taint"
+            name="us.coastalhacking.corvus.annotations.annotation.taint">
+      </type>
+      <type
+            markerType="us.coastalhacking.corvus.annotations.control"
+            name="us.coastalhacking.corvus.annotations.annotation.control">
+      </type>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors.markerAnnotationSpecification">
+      <specification
+            annotationType="us.coastalhacking.corvus.annotations.annotation.entrypoint"
+            colorPreferenceKey="entryPointIndicationColor"
+            colorPreferenceValue="128,0,128"
+            contributesToHeader="true"
+            highlightPreferenceKey="entryPointIndicationHighlighting"
+            highlightPreferenceValue="false"
+            icon="icons/fugue/shadowless/door-open-in.png"
+            includeOnPreferencePage="true"
+            isGoToNextNavigationTarget="true"
+            isGoToNextNavigationTargetKey="isEntryPointGoToNextNavigationTarget"
+            isGoToPreviousNavigationTarget="true"
+            isGoToPreviousNavigationTargetKey="isEntryPointGoToPreviousNavigationTarget"
+            label="Entry Points"
+            overviewRulerPreferenceKey="entryPointIndicationOverviewRuler"
+            overviewRulerPreferenceValue="true"
+            presentationLayer="4"
+            showInNextPrevDropdownToolbarAction="true"
+            showInNextPrevDropdownToolbarActionKey="showEntryPointInNextPrevDropdownToolbarAction"
+            symbolicIcon="info"
+            textPreferenceKey="entryPointIndication"
+            textPreferenceValue="true"
+            textStylePreferenceKey="entryPointTextStyle"
+            textStylePreferenceValue="DASHED_BOX"
+            verticalRulerPreferenceKey="entryPointIndicationVerticalRuler"
+            verticalRulerPreferenceValue="true">
+      </specification>
+      <specification
+            annotationType="us.coastalhacking.corvus.annotations.annotation.sink"
+            colorPreferenceKey="sinkPointIndicationColor"
+            colorPreferenceValue="255,128,0"
+            contributesToHeader="true"
+            highlightPreferenceKey="sinkIndicationHighlighting"
+            highlightPreferenceValue="false"
+            icon="icons/fugue/shadowless/cup--exclamation.png"
+            includeOnPreferencePage="true"
+            isGoToNextNavigationTarget="true"
+            isGoToNextNavigationTargetKey="isSinkGoToNextNavigationTarget"
+            isGoToPreviousNavigationTarget="true"
+            isGoToPreviousNavigationTargetKey="isSinkGoToPreviousNavigationTarget"
+            label="Sinks"
+            overviewRulerPreferenceKey="sinkPointIndicationOverviewRuler"
+            overviewRulerPreferenceValue="true"
+            presentationLayer="4"
+            showInNextPrevDropdownToolbarAction="true"
+            showInNextPrevDropdownToolbarActionKey="showSinkInNextPrevDropdownToolbarAction"
+            symbolicIcon="warning"
+            textPreferenceKey="sinkPointIndication"
+            textPreferenceValue="true"
+            textStylePreferenceKey="sinkTextStyle"
+            textStylePreferenceValue="DASHED_BOX"
+            verticalRulerPreferenceKey="sinkPointIndicationVerticalRuler"
+            verticalRulerPreferenceValue="true">
+      </specification>
+      <specification
+            annotationType="us.coastalhacking.corvus.annotations.annotation.issue"
+            colorPreferenceKey="issuePointIndicationColor"
+            colorPreferenceValue="255,204,255"
+            contributesToHeader="true"
+            highlightPreferenceKey="issueIndicationHighlighting"
+            highlightPreferenceValue="true"
+            icon="icons/fugue/shadowless/skull-old.png"
+            includeOnPreferencePage="true"
+            isGoToNextNavigationTarget="true"
+            isGoToNextNavigationTargetKey="isIssueGoToNextNavigationTarget"
+            isGoToPreviousNavigationTarget="true"
+            isGoToPreviousNavigationTargetKey="isIssueGoToPreviousNavigationTarget"
+            label="Security Issues"
+            overviewRulerPreferenceKey="issuePointIndicationOverviewRuler"
+            overviewRulerPreferenceValue="true"
+            presentationLayer="7"
+            showInNextPrevDropdownToolbarAction="true"
+            showInNextPrevDropdownToolbarActionKey="showIssueInNextPrevDropdownToolbarAction"
+            symbolicIcon="error"
+            textPreferenceKey="issuePointIndication"
+            textPreferenceValue="false"
+            textStylePreferenceKey="issueTextStyle"
+            textStylePreferenceValue="NONE"
+            verticalRulerPreferenceKey="issuePointIndicationVerticalRuler"
+            verticalRulerPreferenceValue="true">
+      </specification>
+      <specification
+            annotationType="us.coastalhacking.corvus.annotations.annotation.taint"
+            colorPreferenceKey="taintPointIndicationColor"
+            colorPreferenceValue="255,0,0"
+            contributesToHeader="true"
+            highlightPreferenceKey="taintIndicationHighlighting"
+            highlightPreferenceValue="false"
+            icon="icons/fugue/shadowless/poison-bubble.png"
+            includeOnPreferencePage="true"
+            isGoToNextNavigationTarget="true"
+            isGoToNextNavigationTargetKey="isTaintGoToNextNavigationTarget"
+            isGoToPreviousNavigationTarget="true"
+            isGoToPreviousNavigationTargetKey="isTaintGoToPreviousNavigationTarget"
+            label="Tainted Data"
+            overviewRulerPreferenceKey="taintPointIndicationOverviewRuler"
+            overviewRulerPreferenceValue="true"
+            presentationLayer="5"
+            showInNextPrevDropdownToolbarAction="true"
+            showInNextPrevDropdownToolbarActionKey="showTaintInNextPrevDropdownToolbarAction"
+            symbolicIcon="warning"
+            textPreferenceKey="taintPointIndication"
+            textPreferenceValue="true"
+            textStylePreferenceKey="taintTextStyle"
+            textStylePreferenceValue="PROBLEM_UNDERLINE"
+            verticalRulerPreferenceKey="taintPointIndicationVerticalRuler"
+            verticalRulerPreferenceValue="true">
+      </specification>
+      <specification
+            annotationType="us.coastalhacking.corvus.annotations.annotation.control"
+            colorPreferenceKey="controlPointIndicationColor"
+            colorPreferenceValue="0,128,0"
+            contributesToHeader="true"
+            highlightPreferenceKey="controlIndicationHighlighting"
+            highlightPreferenceValue="false"
+            icon="icons/fugue/shadowless/surveillance-camera.png"
+            includeOnPreferencePage="true"
+            isGoToNextNavigationTarget="true"
+            isGoToNextNavigationTargetKey="isControlGoToNextNavigationTarget"
+            isGoToPreviousNavigationTarget="true"
+            isGoToPreviousNavigationTargetKey="isControlGoToPreviousNavigationTarget"
+            label="Controls"
+            overviewRulerPreferenceKey="controlPointIndicationOverviewRuler"
+            overviewRulerPreferenceValue="true"
+            presentationLayer="6"
+            showInNextPrevDropdownToolbarAction="true"
+            showInNextPrevDropdownToolbarActionKey="showControlInNextPrevDropdownToolbarAction"
+            symbolicIcon="info"
+            textPreferenceKey="controlPointIndication"
+            textPreferenceValue="true"
+            textStylePreferenceKey="controlTextStyle"
+            textStylePreferenceValue="UNDERLINE"
+            verticalRulerPreferenceKey="controlPointIndicationVerticalRuler"
+            verticalRulerPreferenceValue="true">
+      </specification>
    </extension>
 </plugin>

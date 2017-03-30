@@ -24,26 +24,31 @@
             </visibleWhen>
             <command
                   commandId="us.coastalhacking.corvus.annotations.command.e3.addentrypoint"
+                  icon="platform:/plugin/us.coastalhacking.corvus.annotations.api/icons/fugue/shadowless/door-open-in.png"
                   label="Add Entry Point"
                   style="push">
             </command>
             <command
                   commandId="us.coastalhacking.corvus.annotations.command.e3.addsink"
+                  icon="platform:/plugin/us.coastalhacking.corvus.annotations.api/icons/fugue/shadowless/cup--exclamation.png"
                   label="Add Sink"
                   style="push">
             </command>
             <command
                   commandId="us.coastalhacking.corvus.annotations.command.e3.addissue"
+                  icon="platform:/plugin/us.coastalhacking.corvus.annotations.api/icons/fugue/shadowless/skull-old.png"
                   label="Add Issue"
                   style="push">
             </command>
             <command
                   commandId="us.coastalhacking.corvus.annotations.command.e3.addtaint"
+                  icon="platform:/plugin/us.coastalhacking.corvus.annotations.api/icons/fugue/shadowless/poison-bubble.png"
                   label="Add Taint"
                   style="push">
             </command>
             <command
                   commandId="us.coastalhacking.corvus.annotations.command.e3.addcontrol"
+                  icon="platform:/plugin/us.coastalhacking.corvus.annotations.api/icons/fugue/shadowless/surveillance-camera.png"
                   label="Add Control"
                   style="push">
             </command>
@@ -387,35 +392,49 @@
    <extension
          point="org.eclipse.ui.views">
       <view
+            category="us.coastalhacking.corvus.annotations.viewcategory"
             class="us.coastalhacking.corvus.annotations.ui.e3.EntryPointMarkersView"
+            icon="platform:/plugin/us.coastalhacking.corvus.annotations.api/icons/fugue/shadowless/door-open-in.png"
             id="us.coastalhacking.corvus.annotations.view.entrypoints"
             name="Entry Points"
             restorable="true">
       </view>
       <view
+            category="us.coastalhacking.corvus.annotations.viewcategory"
             class="us.coastalhacking.corvus.annotations.ui.e3.SinkMarkersView"
+            icon="platform:/plugin/us.coastalhacking.corvus.annotations.api/icons/fugue/shadowless/cup--exclamation.png"
             id="us.coastalhacking.corvus.annotations.view.sinks"
             name="Sinks"
             restorable="true">
       </view>
       <view
+            category="us.coastalhacking.corvus.annotations.viewcategory"
             class="us.coastalhacking.corvus.annotations.ui.e3.IssueMarkersView"
+            icon="platform:/plugin/us.coastalhacking.corvus.annotations.api/icons/fugue/shadowless/skull-old.png"
             id="us.coastalhacking.corvus.annotations.view.issues"
             name="Security Issues"
             restorable="true">
       </view>
       <view
-            class="us.coastalhacking.corvus.annotations.ui.e3.ControlMarkersView"
-            id="us.coastalhacking.corvus.annotations.view.controls"
-            name="Controls"
-            restorable="true">
-      </view>
-      <view
+            category="us.coastalhacking.corvus.annotations.viewcategory"
             class="us.coastalhacking.corvus.annotations.ui.e3.TaintedMarkersView"
+            icon="platform:/plugin/us.coastalhacking.corvus.annotations.api/icons/fugue/shadowless/poison-bubble.png"
             id="us.coastalhacking.corvus.annotations.view.tainteddata"
             name="Tainted Data"
             restorable="true">
       </view>
+      <view
+            category="us.coastalhacking.corvus.annotations.viewcategory"
+            class="us.coastalhacking.corvus.annotations.ui.e3.ControlMarkersView"
+            icon="platform:/plugin/us.coastalhacking.corvus.annotations.api/icons/fugue/shadowless/surveillance-camera.png"
+            id="us.coastalhacking.corvus.annotations.view.controls"
+            name="Controls"
+            restorable="true">
+      </view>
+      <category
+            id="us.coastalhacking.corvus.annotations.viewcategory"
+            name="Corvus">
+      </category>
    </extension>
 
 

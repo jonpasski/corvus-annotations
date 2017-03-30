@@ -112,7 +112,7 @@ public class AnnotationController {
 		try {
 			IMarker taintMarker = MarkerAdapter.adapt(dto, Markers.TAINT);
 			taintMarker.setAttribute(IMarker.USER_EDITABLE, true);
-			taintMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_INFO);
+			taintMarker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_WARNING);
 			taintMarker.setAttribute(IMarker.MESSAGE, dto.text);
 
 		} catch (Exception e) {

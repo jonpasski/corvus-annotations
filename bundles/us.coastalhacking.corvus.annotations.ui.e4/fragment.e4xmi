@@ -18,11 +18,11 @@
     <elements xsi:type="menu:MenuContribution" xmi:id="_BducUIrPEeW7h_qdP9N9fw" elementId="" positionInParent="after=additions" parentId="popup">
       <children xsi:type="menu:Menu" xmi:id="_Dtii0IrPEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.menu.popup.e4" visible="false" label="Corvus" iconURI="">
         <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_iKTNwBPAEeelOaUwhH4ISg" coreExpressionId="us.coastalhacking.corvus.annotations.ui.e4.expression.structuredselection"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_Dtii0YrPEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.menu.e4.addentrypoint" label="Add Entry Point" iconURI="" command="_UCYfwIrOEeW7h_qdP9N9fw"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_gkNNYBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addsink" label="Add Sink" command="_oEDqIBM2EeelOaUwhH4ISg"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_jx0Y4BM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addissue" label="Add Issue" command="_rOPuMBM2EeelOaUwhH4ISg"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_Rhme8BM4EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addtaint" label="Add Taint" command="_aZugwBM5EeelOaUwhH4ISg"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_VVOhkBM4EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addcontrol" label="Add Control" command="_eab9IBM5EeelOaUwhH4ISg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_Dtii0YrPEeW7h_qdP9N9fw" elementId="us.coastalhacking.corvus.annotations.menu.e4.addentrypoint" label="Add Entry Point" iconURI="platform:/plugin/us.coastalhacking.corvus.annotations.api/icons/fugue/shadowless/door-open-in.png" command="_UCYfwIrOEeW7h_qdP9N9fw"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_gkNNYBM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addsink" label="Add Sink" iconURI="platform:/plugin/us.coastalhacking.corvus.annotations.api/icons/fugue/shadowless/cup--exclamation.png" command="_oEDqIBM2EeelOaUwhH4ISg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_jx0Y4BM2EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addissue" label="Add Issue" iconURI="platform:/plugin/us.coastalhacking.corvus.annotations.api/icons/fugue/shadowless/skull-old.png" command="_rOPuMBM2EeelOaUwhH4ISg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_Rhme8BM4EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addtaint" label="Add Taint" iconURI="platform:/plugin/us.coastalhacking.corvus.annotations.api/icons/fugue/shadowless/poison-bubble.png" command="_aZugwBM5EeelOaUwhH4ISg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_VVOhkBM4EeelOaUwhH4ISg" elementId="us.coastalhacking.corvus.annotations.menu.e4.addcontrol" label="Add Control" iconURI="platform:/plugin/us.coastalhacking.corvus.annotations.api/icons/fugue/shadowless/surveillance-camera.png" command="_eab9IBM5EeelOaUwhH4ISg"/>
       </children>
     </elements>
   </fragments>
