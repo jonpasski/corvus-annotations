@@ -1,5 +1,7 @@
 # Corvus
 
+[![Build Status](https://travis-ci.org/CoastalHacking/corvus-annotations.svg?branch=master)](https://travis-ci.org/CoastalHacking/corvus-annotations)
+
 From [Wikipedia](https://en.wikipedia.org/wiki/Corvus):
 
 > Corvus is a widely distributed genus of medium-sized to large birds in the family Corvidae. The genus includes species commonly known as crows, ravens, rooks and jackdaws;

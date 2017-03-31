@@ -46,6 +46,13 @@ Configure pushes to the fork remote versus the origin:
 You've setup two out of the three sides of a triangular workflow, with the
 third being your pull requests.
 
+### Setup Travis CI
+
+Corvus uses [Travis CI](https://travis-ci.org). When forking, setup Travis CI
+for  your forked repository to test your pushed commits. When you submit a pull
+request, Travis CI will also build it. Pull requests not built using Travis CI
+won't likely be merged.
+
 ## Contribution guidelines
 
 ### Sign your work
