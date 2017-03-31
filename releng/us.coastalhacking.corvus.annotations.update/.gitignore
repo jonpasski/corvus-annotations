@@ -1,0 +1,6 @@
+# un-ignore target
+!target/
+# then ignore everything in target
+target/*
+# except for this file
+!target/us.coastalhacking.corvus.annotations.update*.zip
