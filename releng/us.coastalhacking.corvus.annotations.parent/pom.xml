@@ -58,7 +58,8 @@
 				<artifactId>tycho-p2-repository-plugin</artifactId>
 				<version>${tycho.version}</version>
 				<configuration>
-					<includeAllDependencies>true</includeAllDependencies>
+				    <!--  don't set to true && commit, else large file warning in GitHub -->
+					<includeAllDependencies>false</includeAllDependencies>
 				</configuration>
 			</plugin>
 		</plugins>
