@@ -53,6 +53,15 @@
 					</environments>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-repository-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+				    <!--  don't set to true && commit, else large file warning in GitHub -->
+					<includeAllDependencies>false</includeAllDependencies>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>

@@ -18,6 +18,13 @@ reminders for outstanding work that should be performed.
 
 ## Installing
 
+* Download the zipped p2 update site located in this [directory](releng/us.coastalhacking.corvus.annotations.update/target/)
+* In Eclipse, "Help" &rarr; "Install New Software"
+  * Click "Add..."
+  * Click "Archive..."
+  * Select the downloaded zipped p2 update site, optionally give this site a name, and select OK
+  * In the "Work with" dropdown, select the newly added site from above, select Corvus Annotations, and continue with the installation
+
 ## Getting Started
 
 Once installed, Corvus adds the following [Views](http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.platform.doc.user%2FgettingStarted%2Fqs-02b.htm):
